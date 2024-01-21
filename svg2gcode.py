@@ -119,12 +119,12 @@ def get_shapes(path, auto_scale=True):
     return shapes
 
 
-def g_string(x, y, z=False, prefix="G1", p=3):
+def g_string(x, y, z=False, prefix="G1"):   # , p=3
     if z is not False:
-        return f"{prefix} X{x:.{p}f} Y{y:.{p}f} Z{z:.{p}f}"
+        return "{} X{:.3f} Y{:.3f} Z{:.3f}".format(prefix, x, y, z)
 
     else:
-        return f"{prefix} X{x:.{p}f} Y{y:.{p}f}"
+        return "{} X{:.3f} Y{:.3f}".format(prefix, x, y)
 
 
 def shapes_2_gcode(shapes):
