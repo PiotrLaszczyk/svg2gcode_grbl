@@ -14,10 +14,10 @@ shape_postamble = "(shape postamble)"
 #shape_postamble = "Z100)"
 
 """Print bed width in mm"""
-bed_max_x = 200
+bed_max_x = 400
 
 """Print bed height in mm"""
-bed_max_y = 280
+bed_max_y = 300
 
 """ 
 Used to control the smoothness/sharpness of the curves.
@@ -28,16 +28,16 @@ value is greater than 0.1
 smoothness = 0.02
 
 """ height that the z axis will use to travel between strokes """
-zTravel = 4
+zTravel = 1
 
 """ height that the z axis will use to draw """
 zDraw = 0
 
 """ feed rate """
-feed_rate = 80000
+feed_rate = 1000
 
 """ decimal precision of gcode"""
-precision = 2
+precision = 1
 
 
 """ scale gcode to fit bed size"""
@@ -50,5 +50,5 @@ optimise = True
 illustrator exports svg's in points, not mm
 set to "mm" if you don't want to convert to mm
 """
-units = "points"
-#units = "mm"
+#units = "points"
+units = "mm"
