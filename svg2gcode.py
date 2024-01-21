@@ -133,7 +133,7 @@ def shapes_2_gcode(shapes):
     with open("header.txt") as h:
         header = h.read()
 
-    commands = [f"{header}", f'F{feed_rate}']
+    commands = ["{}".format(header), "F{feed_rate}".format(feed_rate)]
 
     for i in shapes:
         commands += ['', shape_preamble, ""]
@@ -149,7 +149,7 @@ def shapes_2_gcode(shapes):
 
     commands += [" ",postamble, ""]
 
-    commands += ["(home)", f"G0 {zTravel}", f"G0 X0 Y0"]
+    commands += ["(home)", "G0 {}".format(zTravel), "G0 X0 Y0"]
 
 
     timer(t1, "shapes_2_gcode   ")
